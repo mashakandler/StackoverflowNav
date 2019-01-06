@@ -7,12 +7,14 @@
 
 <div>
   <app-searchbar (search)="this.searchHandle($event)"></app-searchbar>
-  <div>
-    <div>
-      <app-searchresults [searchResults]="searchResults"></app-searchresults>
+  <div class="row">
+    <div class="results">
+      <app-searchresults [searchResults]="searchResults"  (selectResult)="this.selectResultHandle($event)"></app-searchresults>
     </div>
-    <div>
-      <app-searchresultdetails></app-searchresultdetails>
+    <div class="details">
+      <div *ngIf="this.selctedSearchResult">
+          <app-searchresultdetails [searchResult]="this.selctedSearchResult"></app-searchresultdetails>
+      </div>
     </div>
   </div>
 </div>

@@ -11,6 +11,7 @@ import SerachService from './shared/search/search.service';
 export class AppComponent {
   title = 'StackoverflowNav';
   searchResults: SearchResult[];
+  selctedSearchResult: SearchResult;
 
   constructor(private serachService: SerachService) { }
 
@@ -18,5 +19,9 @@ export class AppComponent {
       this.serachService.getSearchResults(event).subscribe((data) => {
           this.searchResults = data;
       });
+  }
+
+  selectResultHandle(result) {
+    this.selctedSearchResult = result;
   }
 }

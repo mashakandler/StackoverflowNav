@@ -1,0 +1,18 @@
+h1 {
+    font-family: 'Assistant'
+}
+
+.row {
+    display: flex;
+}
+
+.results {
+    max-width: 33%;
+}
+
+.details > div {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 5px;
+}
+

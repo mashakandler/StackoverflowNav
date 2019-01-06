@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import SearchResult from 'src/app/models/searchResult';
 
 @Component({
@@ -11,5 +11,10 @@ export class SearchresultsComponent {
   constructor() { }
 
   @Input() searchResults: SearchResult[];
+  @Output() selectResult = new EventEmitter();
+
+  onClickHandler(searchResult) {
+    this.selectResult.emit(searchResult);
+  }
 
 }
