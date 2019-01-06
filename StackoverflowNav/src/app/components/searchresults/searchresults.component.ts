@@ -2,11 +2,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import SearchResult from 'src/app/models/searchResult';
 
 @Component({
-  selector: 'app-searchresults',
+  selector: 'app-search-results',
   templateUrl: './searchresults.component.html',
   styleUrls: ['./searchresults.component.scss']
 })
-export class SearchresultsComponent {
+export class SearchResultsComponent {
 
   constructor() { }
 

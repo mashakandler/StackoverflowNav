@@ -9,11 +9,11 @@
   <app-searchbar (search)="this.searchHandle($event)"></app-searchbar>
   <div class="row">
     <div class="results">
-      <app-searchresults [searchResults]="searchResults"  (selectResult)="this.selectResultHandle($event)"></app-searchresults>
+      <app-search-results [searchResults]="searchResults"  (selectResult)="this.selectResultHandle($event)"></app-search-results>
     </div>
     <div class="details">
       <div *ngIf="this.selctedSearchResult">
-          <app-searchresultdetails [searchResult]="this.selctedSearchResult"></app-searchresultdetails>
+          <app-search-result-details [searchResult]="this.selctedSearchResult"></app-search-result-details>
       </div>
     </div>
   </div>

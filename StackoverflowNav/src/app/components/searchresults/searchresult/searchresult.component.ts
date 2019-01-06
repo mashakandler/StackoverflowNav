@@ -2,17 +2,18 @@ import { Component, OnInit, Input } from '@angular/core';
 import SearchResult from 'src/app/models/searchResult';
 
 @Component({
-  selector: 'app-searchresult',
+  selector: 'app-search-result',
   templateUrl: './searchresult.component.html',
   styleUrls: ['./searchresult.component.scss']
 })
-export class SearchresultComponent implements OnInit {
+export class SearchResultComponent implements OnInit {
 
   @Input() searchresult: SearchResult;
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

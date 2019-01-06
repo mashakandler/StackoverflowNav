@@ -9,7 +9,6 @@ import SerachService from './shared/search/search.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'StackoverflowNav';
   searchResults: SearchResult[];
   selctedSearchResult: SearchResult;
 
@@ -17,6 +16,7 @@ export class AppComponent {
 
   searchHandle(event) {
       this.serachService.getSearchResults(event).subscribe((data) => {
+          this.selctedSearchResult = null;
           this.searchResults = data;
       });
   }

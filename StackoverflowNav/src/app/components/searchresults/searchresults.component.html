@@ -1,6 +1,6 @@
 <div>
   <div *ngIf="!searchResults || searchResults.length == 0">No Results</div>
   <div *ngFor="let item of searchResults" class="wrapper">
-     <app-searchresult [searchresult]="item" (click)="this.onClickHandler(item)"></app-searchresult>
+     <app-search-result [searchresult]="item" (click)="this.onClickHandler(item)"></app-search-result>
   </div>
 </div>
